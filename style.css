@@ -11,13 +11,16 @@ body{
     transition: background-color 0.4s;
 }
 
+.contenedor{
+    margin-top: 50px;
+}
 .contenedor, .contenedor-principal{
     display: flex;
     justify-content: center;
 }
 .contenedor-principal{
     flex-direction: column;
-    width: 22%;
+    width: 300px;
     gap: 10px;
     h1{
         margin-bottom: 5px;
@@ -78,9 +81,6 @@ body{
         padding: 8px;
         background-color: var(--colorButtonI);
     }
-    .completado{
-        background-color: rgb(172, 82, 149);
-    }
 }
 
 /* toggles */
@@ -123,13 +123,6 @@ body{
         button{
             background-color: var(--colorButtonI2);
         }
-        .completado{
-            background-color: rgb(231, 113, 202);
-        }
     }
 }
 
-.tarjeta-marcada{
-        background-color: gray;
-    
-}

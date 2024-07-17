@@ -46,7 +46,6 @@ function cargarTarjetas() {
     if(arrayNotas.length > 0 ){
         arrayNotas.forEach(nota => {
         const div = document.createElement("div");
-        const button =  document.createElement("button");
         div.classList.add("tarjeta");
         div.id = nota.id;
         div.innerHTML = `
@@ -54,31 +53,14 @@ function cargarTarjetas() {
             <button type="button" class="delete">Delete <i class="fa-regular fa-trash-can"></i></button>
         `;
         notasCreadas.appendChild(div);
-        div.appendChild(button);
-        button.innerHTML = "Sin completar"
         textArea.value = "";
-        const eliminarBoton = div.querySelector(".delete")
-        eliminarBoton.addEventListener("click", ()=> eliminarTarjeta(div.id))
-        button.addEventListener("click", e => div.classList.toggle("tarjeta-marcada"));
-        // button.addEventListener("click", e => cambiarCoso(button, div.id));
+        const eliminarBoton = div.querySelector(".delete");
+        eliminarBoton.addEventListener("click", ()=> eliminarTarjeta(div.id));
         
         });
     }
 }
-// let coso = true;
-function cambiarCoso(elemento, id) {
-    // const tareaCompletar = document.getElementById(id);
-    
-    // if(coso){
-        elemento.innerHTML = "Completado"
-        elemento.classList.toggle("completado") 
-        // tareaCompletar.classList.toggle("tarjeta-marcada")
-    // }else{
-    //     elemento.innerHTML = "Sin completar"
-    //     elemento.classList.remove("completado")
-    // }
-    // coso = false
-}
+
 
 
 function crearTarjeta(){
