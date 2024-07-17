@@ -1,0 +1,135 @@
+:root{
+    --colorFondo: #f2f2f2;
+    --colorFondo2: #1f1e1e;
+    --colorButton: #4f4f4f;
+    --colorButtonI: #8590b4;
+    --colorButtonI2: #4050a8;
+}
+body{
+    background-color: var(--colorFondo);
+    font-family: Roboto;
+    transition: background-color 0.4s;
+}
+
+.contenedor, .contenedor-principal{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-principal{
+    flex-direction: column;
+    width: 22%;
+    gap: 10px;
+    h1{
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 36px;
+    }
+    textarea{
+        border-radius: 16px;
+        padding: 16px;
+        border: 2px solid var(--colorButton);
+        font-family: Roboto;
+        resize: none;
+        font-size: 18px;
+    }
+    textarea::placeholder{
+        color: var(--colorButton);
+    }
+    button{
+        background-color: var(--colorButton);
+        color: white;
+        padding: 5px;
+        border-radius: 16px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        border: none;
+        box-shadow: 4px 6px 3px 0px rgba(14, 14, 14, 0.945);
+        cursor: pointer;
+        font-family: Roboto;
+        margin-bottom: 10px;
+    }
+    button:active{
+        transform: scale(0.9);
+        transition: all 0.1s;
+    }
+}
+
+
+/* nuevas tarjetas */
+
+.tarjetas, .tarjeta{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tarjeta{
+    border: 2px solid var(--colorButton);
+    border-radius: 16px;
+    padding: 8px;
+    background-color: white;
+    h3{
+        line-break: anywhere;
+        font-weight: 500;
+    }
+    button{
+        align-self: flex-end;
+        margin-bottom: 2px;
+        box-shadow: none;
+        padding: 8px;
+        background-color: var(--colorButtonI);
+    }
+    .completado{
+        background-color: rgb(172, 82, 149);
+    }
+}
+
+/* toggles */
+
+.toggle-contenedor{
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    .toggle{
+        border: 2px solid var(--colorButton);
+        border-radius: 15px;
+        overflow: hidden;
+        font-size: 0;
+        background-color: var(--colorButtonI);
+    }
+    i{
+        font-size: 16px;
+        padding: 6px;
+        cursor: pointer;
+    }
+    .oscuro{
+        background-color: var(--colorFondo);
+        transition: background-color 0.2s;
+    }
+    
+}
+
+.fondo-oscuro{
+    background-color: var(--colorFondo2);
+    h1, i{
+        color: white;
+    }
+    .toggle{
+        background-color: var(--colorFondo2);
+        .oscuro{
+            background-color: var(--colorButtonI2);
+        }
+    }
+    .tarjeta {
+        button{
+            background-color: var(--colorButtonI2);
+        }
+        .completado{
+            background-color: rgb(231, 113, 202);
+        }
+    }
+}
+
+.tarjeta-marcada{
+        background-color: gray;
+    
+}
